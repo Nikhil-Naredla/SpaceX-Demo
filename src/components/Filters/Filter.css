@@ -1,0 +1,32 @@
+.btn-color{
+    background-color: #BCED91;
+}
+
+.LHead{
+    text-align: center;
+    font-size: 1.2rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid lightgray; 
+}
+
+
+.grid-2-filter {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0.5rem;
+}
+
+@media (max-width: 700px) {
+ 
+
+  .grid-2-filter{
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+
+
+ 
+
+ }
+ 

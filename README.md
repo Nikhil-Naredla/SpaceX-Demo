@@ -28,7 +28,7 @@ Allows users to go through the Missions launched by the SpaceX ,users can filter
    
    ## Context-Api With useContext + useReducer = Magic 
    
-    i thought about using Redux at first,but it seemed to me as an overkill,so i decided to go to react hooks , and i loved it while developing how good context and useReducer works, i created the good old context api .and and manipulate the state file in Reducer file, its esy,and i wrapped it above the top level ,so that all the component tree below it can recieve it
+    i thought about using Redux at first,but it seemed to me as an overkill,so i decided to go with react hooks , and i loved it while developing that how good context and useReducer works, i created the good old context api and manipulate the state file and dispatch some actions to the useReducer that contains Reducer file, its easy,and i wrapped it above the top level ,so that all the component tree below it can recieve it
     
     all the actions generally typical arrow functions are written inside the stae file which hold the jsx as context api, and state changing using useReducer,and i finally dispatched it to reducer file
     

@@ -8,7 +8,7 @@ Allows users to go through the Missions launched by the SpaceX ,users can filter
 ## Installing 
  creating the React app on cli
  
- ### ` npx create-react-app <Your-projrct-name>`
+ ### ` npx create-react-app <Your-project-name>`
  
  running the app on the local machine
  

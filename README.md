@@ -1,68 +1,88 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# SpaceX Demo Clone
 
-## Available Scripts
+Allows users to go through the Missions launched by the SpaceX ,users can filter the Missions by Year wise,Successfull Launching and Successful Landing, and it has good responsiveness in the desktop view and also on mobile view for greater user experoience
 
-In the project directory, you can run:
+## Getting Started
 
-### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Installing 
+ creating the React app on cli
+ 
+ ### ` npx create-react-app <Your-projrct-name>`
+ 
+ running the app on the local machine
+ 
+  ### ` npm start`
+  
+ installing axios for doing HTTP calls
+ 
+  ### ` npm install axios`
+  
+  installing react router for routing purposes in app
+  
+   ### ` npm install react-router-dom`
+   
+   ## Project building
+   
+   used React-js to build the project, used typical component based ui structure for ease of development. and axios instance for rest api services, and React router v5 for routing the app
+   
+   ## Context-Api With useContext + useReducer = Magic 
+   
+    i thought about using Redux at first,but it seemed to me as an overkill,so i decided to go to react hooks , and i loved it while developing how good context and useReducer works, i created the good old context api .and and manipulate the state file in Reducer file, its esy,and i wrapped it above the top level ,so that all the component tree below it can recieve it
+    
+    all the actions generally typical arrow functions are written inside the stae file which hold the jsx as context api, and state changing using useReducer,and i finally dispatched it to reducer file
+    
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+ ## api used 
+    https://docs.spacexdata.com/
+    
+    
+ ## React-Router and withRouter HOC
+ 
+   general routing,and intresting part is how convienient to pass the history,match and other router  props to the deeply nested component ,withRouter Higher Order Components done pretty good job,with that i used programatical navigation inside the components with
 
-### `npm test`
+### 'props.history.push('your route')'
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## used NotFound Route
+if user acess the page taht does not exists,the app might break,so i used notfound route component ,place it in last of routing order ,beacuse order is important
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## component reused
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+i reused missionItems component to recieve the results from state and map through it and display the required results on ui
+    
+ ## UI and Responsiveness
+ 
+ i used vanilla css for good looking cards and button effects and positioning the ui items
+  for responsiveness i used css gird and media queries combined ,to view the page at different breakpoints
+  
+  ## Production and Deployment
+  
+  created the buid file,by running the command
+  
+   ### ` npm run build`
+   
+   i deployed it to the web using Firebase cloud hosting
+   
+   ### `firebase init`
+   
+   ### `firebase deploy`
+   
+   
+ ## deployed website on cloud
+ 
+ https://spacex-demo-nikhil.web.app/
+ 
+ 
+ ## App Info
+ 
+ ## Author
+  Nikhil Naredla
+  
+ ## License
+ 
+ this project is licensed under the MIT License
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+    
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
